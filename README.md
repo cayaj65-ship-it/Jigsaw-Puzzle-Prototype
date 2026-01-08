@@ -14,6 +14,6 @@ This GitHub respository contains the unity project file, a protoype, 4 tutorials
 
 ### Tutorial 4:
 
-### Learning Journal:
+### Learning Journal with demonstration of protoype video:
 
-**Demonstration of the protoype:**
+
