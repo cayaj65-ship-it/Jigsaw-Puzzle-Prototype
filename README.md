@@ -20,6 +20,8 @@ images:
 
 ### Learning Journal:
 
+### Work Log:
+
 ### Demonstration of protoype video:
 
 
