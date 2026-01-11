@@ -8,15 +8,15 @@ This GitHub respository contains the unity project file, a protoype, 4 tutorials
 
 ### Images for each Tutorial:
 
-### Tutorial 1:
+### Tutorial 1: https://github.com/cayaj65-ship-it/Jigsaw-Puzzle-Prototype/blob/main/Tutorials/Tutorial%201%20-%20Implement%20Bezier%20Curve
 
-### Tutorial 2:
+### Tutorial 2: https://github.com/cayaj65-ship-it/Jigsaw-Puzzle-Prototype/blob/main/Tutorials/Tutorial%202%20-%20Create%20a%20Jigsaw%20Tile%20with%20an%20image
 
-### Tutorial 3:
+### Tutorial 3: https://github.com/cayaj65-ship-it/Jigsaw-Puzzle-Prototype/blob/main/Tutorials/Tutorial%203%20-%20Create%20a%20Jigsaw%20Board
 
-### Tutorial 4:
+### Tutorial 4: https://github.com/cayaj65-ship-it/Jigsaw-Puzzle-Prototype/blob/main/Tutorials/Tutorial%204%20-%20Create%20Jigsaw%20Tile%20Movement
 
-### Learning Journal:
+### Learning Journal: https://github.com/cayaj65-ship-it/Jigsaw-Puzzle-Prototype/blob/main/Tutorials/Learning%20Journal
 
 ### Work Log:
 
