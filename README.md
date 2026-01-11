@@ -18,7 +18,7 @@ This GitHub respository contains the unity project file, a protoype, 4 tutorials
 
 ### Learning Journal: https://github.com/cayaj65-ship-it/Jigsaw-Puzzle-Prototype/blob/main/Tutorials/Learning%20Journal
 
-### Work Log:
+### Work Log: https://stulsbuac-my.sharepoint.com/:x:/g/personal/s4321315_lsbu_ac_uk/IQDWCfIaNScISZQz82z4hktsARqw0n3z_GuPxwBB-J5eccM?e=XH9tSb
 
 ### Demonstration of protoype video:
 
