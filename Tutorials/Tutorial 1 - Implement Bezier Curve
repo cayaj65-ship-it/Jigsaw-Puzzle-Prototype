@@ -4,3 +4,154 @@ First create a script folder and create a C# script with the name 'BezierCurve'
 
 
 # Final Script 
+
+using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BezierCurve
+{
+    private static float[] Flactorial = new float[]
+    {
+        // Create a lookup table of the flactorial values
+        // to improve performance instead of calculating
+        // Set the values up to 18
+
+        1.0f,
+        1.0f,
+        2.0f,
+        6.0f,
+        24.0f,
+        120.0f,
+        720.0f,
+        5040.0f,
+        40320.0f,
+        362880.0f,
+        3628800.0f,
+        39916800.0f,
+        479001600.0f,
+        6227020800.0f,
+        87178291200.0f,
+        1307674368000.0f,
+        20922789888000.0f
+
+    };
+
+    // Create the Binomial function based on the Bionomial coefficient formula
+    private static float Binomial(int n, int i)
+    {
+        float ni;
+        float a1 = Flactorial[n];
+        float a2 = Flactorial[i];
+        float a3 = Flactorial[n - i];
+        ni = a1 / (a2 * a3);
+        return ni;
+    }
+
+    // Afterwards, create the Bernstein basis points function
+    private static float Bernstein(int n, int i, float t)
+    {
+        float t_i = Mathf.Pow(t, i);
+        float t_n_i = Mathf.Pow(1 - t, n - i);
+
+        float basis = Binomial(n, i) * t * t_i * t_n_i;
+        return basis;
+    }
+
+    // Then, impelemnt the Bezier curve point function
+    // This function will return the interpolated poinmt where t must be between 0 and 1
+    public static Vector3 Point3(float t, List<Vector3> controlPoints)
+    {
+        // This functyion will be used to return a bezier curve point which is based on the Bezier curve equation
+        // t can be between 0 and 1 which is both inclusive
+        int N = controlPoints.Count - 1; // Degree of the curve 
+        if (N > 18)
+        {
+            Debug.Log("You have used more than 18 control points. The maxium allowable control" + "points for this tutorial is 18");
+            // It'll remove the extra control points more than 18 counts
+            controlPoints.RemoveRange(18, controlPoints.Count - 18);
+        }
+
+        if (t <= 0) return controlPoints[0];
+        if (t >= 1) return controlPoints[controlPoints.Count - 1];
+
+        Vector3 p = new Vector3();
+        for (int i = 0; i < controlPoints.Count; i++)
+        {
+            Vector3 bn = Bernstein(N, i, t) * controlPoints[i];
+            p += bn;
+        }
+        return p;
+    }
+
+    // Now calculate all the points for the entire curve from t = 0 to t = 1 with an increment of 0.01
+    public static List<Vector3> PointsList3(List<Vector3> controlPoints, float interval = 0.01f)
+    {
+        int N = controlPoints.Count - 1;
+        if (N > 18)
+        {
+            Debug.Log("You have used more than 18 control points. The maxium allowable control" + "points for this tutorial is 18");
+            controlPoints.RemoveRange(18, controlPoints.Count - 18);
+        }
+
+        List<Vector3> points = new List<Vector3>();
+        for (float t = 0.0f; t <= 1.0f + interval - 0.0001f; t += interval)
+        {
+            Vector3 p = new Vector3();
+            for (int i = 0; i < controlPoints.Count; ++i)
+            {
+                Vector3 bn = Bernstein(N, i, t) * controlPoints[i];
+                p += bn;
+            }
+            points.Add(p);
+        }
+        return points;
+    }
+
+    public static Vector2 Point2(float t, List<Vector2> controlPoints)
+    {
+        int N = controlPoints.Count - 1;
+        if (N > 16)
+        {
+            Debug.Log("You have used more than 18 control points. The maxium allowable control" + "points for this tutorial is 18");
+            controlPoints.RemoveRange(18, controlPoints.Count - 16);
+        }
+
+        if (t <= 0) return controlPoints[0];
+        if (t >= 1) return controlPoints[controlPoints.Count - 1];
+
+        Vector2 p = new Vector2();
+        for (int i = 0; i < controlPoints.Count; i++)
+        {
+            float bn = Bernstein(N, i, t);
+            p += bn * controlPoints[i];
+        }
+        return p;
+    }
+
+    public static List<Vector2> PointsList2(List<Vector2> controlPoints, float interval = 0.01f)
+    {
+        int N = controlPoints.Count - 1;
+        if (N > 16)
+        {
+            Debug.Log("You have used more than 18 control points. The maxium allowable control" + "points for this tutorial is 18");
+            controlPoints.RemoveRange(18, controlPoints.Count - 16);
+        }
+
+        List<Vector2> points = new List<Vector2>();
+        for (float t = 0.0f; t <= 1.0f + interval - 0.0001f; t += interval)
+        {
+            Vector2 p = new Vector2();
+            for (int i = 0; i < controlPoints.Count; ++i)
+            {
+                float bn = Bernstein(N, i, t);
+                p += bn * controlPoints[i];
+            }
+            points.Add(p);
+        }
+        return points;
+    }
+}
+
+
