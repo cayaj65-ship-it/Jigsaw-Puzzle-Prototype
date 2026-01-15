@@ -20,7 +20,7 @@ This GitHub respository contains the unity project file, a protoype, 4 tutorials
 
 ### Work Log: https://stulsbuac-my.sharepoint.com/:x:/g/personal/s4321315_lsbu_ac_uk/IQDWCfIaNScISZQz82z4hktsARqw0n3z_GuPxwBB-J5eccM?e=XH9tSb
 
-### Demonstration of protoype video:
+### Demonstration of protoype video: https://drive.google.com/drive/folders/1Xi8xzDEehTvqCGM-nLcdRzw5kx0OSXfk?usp=sharing
 
 ### Unity File: https://drive.google.com/drive/folders/14YLSLRp1LfzYcsM37syId4nYVS-C8WEt?usp=sharing
 
