@@ -14,7 +14,7 @@ This GitHub respository contains the unity project file, a protoype, 4 tutorials
 
 ### Tutorial 3: https://github.com/cayaj65-ship-it/Jigsaw-Puzzle-Prototype/blob/main/Tutorials/Tutorial%203%20–%20Create%20Jigsaw%20Board%20with%20Image.pdf
 
-### Tutorial 4: 
+### Tutorial 4: https://github.com/cayaj65-ship-it/Jigsaw-Puzzle-Prototype/blob/main/Tutorials/Tutorial%204%20-%20Tile%20Movement%20.pdf
 
 ### Learning Journal: https://github.com/cayaj65-ship-it/Jigsaw-Puzzle-Prototype/blob/main/Tutorials/Learning%20Journal.pdf
 
